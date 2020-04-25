@@ -1,4 +1,4 @@
-FROM dwimberger/alpine-dmtx-pm2:latest
+FROM gourneau/dmtx:base
 
 # Create app directory
 RUN mkdir -p /usr/src/app

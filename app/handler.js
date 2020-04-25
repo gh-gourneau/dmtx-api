@@ -42,7 +42,7 @@ function doDecode(req, res, next) {
   debug('filepath %j', file);
 
   var result = '';
-  var child = spawn('dmtxread', [file]);
+  var child = spawn('dmtxread', ["-S 3", file]);
   debug('Spawned child process');
   child.stdout.on('data', function(chunk) {
     debug('Got data %j', chunk.toString());
